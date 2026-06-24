@@ -78,13 +78,13 @@ whoami
 Example:
 
 ```text
-desktop-123abc\saad
+desktop-123abc\ravi
 ```
 
 Username:
 
 ```text
-saad
+ravi
 ```
 
 ---
@@ -98,7 +98,7 @@ echo %username%
 Example:
 
 ```text
-saad
+ravi
 ```
 
 ---
@@ -122,7 +122,7 @@ ssh username@IP_Address
 Example:
 
 ```bash
-ssh saad@192.168.1.100
+ssh ravi@192.168.1.100
 ```
 
 ---
