@@ -2,7 +2,7 @@
 
 ## 🎯 Aim
 
-Kali Linux VM se Windows 11 machine par **SSH connection establish** karna aur remote login successfully perform karna.
+Establish an **SSH connection** from Kali Linux VM to Windows 11 machine and successfully perform remote login.
 
 ---
 
@@ -17,7 +17,7 @@ Kali Linux VM se Windows 11 machine par **SSH connection establish** karna aur r
 
 # 🌐 Network Requirement
 
-✔ Dono machines same network par honi chahiye (Bridged/Host-Only).
+✔ Both machines must be on the same network (Bridged/Host-Only).
 
 Example:
 
@@ -63,7 +63,7 @@ Example:
 IPv4 Address . . . . . : 192.168.1.100
 ```
 
-✅ Success: IPv4 address dikh jaye.
+✅ Success: IPv4 address is displayed.
 
 ---
 
@@ -271,13 +271,13 @@ localhost's password:
 
 # If You Don't Know Windows Password
 
-SSH PIN accept nahi karta.
+SSH does not accept PIN.
 
 ❌ Windows PIN
 ❌ Fingerprint
 ❌ Face Unlock
 
-✔ Sirf actual account password.
+✔ Only actual account password.
 
 ---
 
@@ -395,7 +395,7 @@ Enter:
 Password123
 ```
 
-⚠ Password type karte waqt screen par kuch dikhai nahi dega. Ye normal hai.
+⚠ While typing the password, nothing will appear on the screen. This is normal.
 
 Press:
 
@@ -413,7 +413,7 @@ Microsoft Windows [Version 10.0.xxxxx]
 C:\Users\sshtest>
 ```
 
-Ya:
+OR:
 
 ```cmd
 C:\Users\username>
@@ -570,7 +570,7 @@ Cause:
 
 ### What is SSH?
 
-SSH (Secure Shell) ek secure protocol hai jo remote administration ke liye use hota hai.
+SSH (Secure Shell) is a secure protocol used for remote administration.
 
 ---
 
@@ -594,13 +594,13 @@ SSH (Secure Shell) ek secure protocol hai jo remote administration ke liye use h
 
 ### Why use `ping` first?
 
-Network connectivity verify karne ke liye.
+To verify network connectivity.
 
 ---
 
 ### Why use `ssh -v`?
 
-SSH troubleshooting aur debugging ke liye.
+For SSH troubleshooting and debugging.
 
 ---
 
@@ -630,16 +630,16 @@ Windows 11 SSH Server
 Remote Command Line Access
 ```
 
-Jab screen par:
+When you see on the screen:
 
 ```cmd
 C:\Users\username>
 ```
 
-ya
+or
 
 ```cmd
 C:\Users\sshtest>
 ```
 
-dikh jaye, tab aapka **SSH Practical 100% Successfully Complete** ho gaya hai. 🎉🔥
+Then your **SSH Practical is 100% Successfully Complete**. 🎉🔥

