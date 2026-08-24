@@ -25,10 +25,10 @@
 
 ## 📡 What is Wireless Networking?
 
-> **Wireless Networking** ek technology hai jo devices ko **without cable** network se connect karti hai.
+> **Wireless Networking** is a technology that connects devices to the network **without cables**.
 
 ### Communication Medium:
-> Radio waves ke through communication hoti hai.
+> Communication happens through **radio waves**.
 
 ---
 
@@ -111,7 +111,7 @@ Router 📡
 
 ### What is Wi-Fi?
 
-> Wi-Fi sabse common wireless networking technology hai.
+> Wi-Fi is the most common wireless networking technology.
 
 ### Where It's Used:
 - 🏠 Homes
@@ -141,13 +141,13 @@ Laptop 💻 | Mobile 📱 | TV 📺
 > **Wi-Fi = Wireless Cable**
 
 ### Explanation:
-> Cable ki jagah **hawa me signal** travel karta hai.
+> Instead of a cable, the signal travels through **the air**.
 
 ---
 
 ## 📋 Wi-Fi Standards — IEEE 802.11
 
-> IEEE Organization Wi-Fi standards banati hai.
+> IEEE Organization creates Wi-Fi standards.
 
 ---
 
@@ -223,10 +223,10 @@ Laptop 💻 | Mobile 📱 | TV 📺
 
 ## 🎧 What is Bluetooth?
 
-> Bluetooth **short-range** wireless technology hai.
+> Bluetooth is a **short-range** wireless technology.
 
 ### Purpose:
-> Short distance devices connect karne ke liye.
+> For connecting devices over short distances.
 
 ---
 
@@ -255,7 +255,7 @@ Typically: 10 Meters
 > **Bluetooth = Personal Wireless Cable**
 
 ### Explanation:
-> Short distance, personal devices ke liye!
+> For short distance, personal devices!
 
 ---
 
@@ -286,7 +286,7 @@ Typically: 10 Meters
 > Mobile communication network.
 
 ### How It Works:
-> **Cell Towers** use karke communication hota hai.
+> Communication happens using **Cell Towers**.
 
 ---
 
@@ -350,7 +350,7 @@ Internet 🌐
 > **Low Power** Wireless Technology.
 
 ### Primary Use:
-> Mostly **IoT devices** me use hoti hai.
+> Mostly used in **IoT devices**.
 
 ---
 
@@ -377,7 +377,7 @@ Device B
 Device C
 ```
 
-> Signal **hop karke** long distance travel kar sakta hai!
+> Signal can **hop** to travel long distances!
 
 ---
 
@@ -449,7 +449,7 @@ Payment Done! ✅
 > Wireless networks are hackers' **favourite targets**.
 
 ### Therefore:
-> Security bahut **important** hai!
+> Security is very **important**!
 
 ---
 
@@ -478,7 +478,7 @@ WPA TKIP
 > **WPS** = Wi-Fi Protected Setup
 
 ### Problem:
-> Attackers **brute force** attack kar sakte hain.
+> Attackers can perform **brute force** attacks.
 
 ### Recommendation:
 ```
@@ -514,7 +514,7 @@ L0ng$Strong@123#2024
 
 ## 5. 🏠 Network Segmentation
 
-### Separate Networks Create Karo:
+### Create Separate Networks:
 
 ```
 Guest WiFi 🚪
@@ -523,7 +523,7 @@ Main WiFi 🏠
 ```
 
 ### Benefit:
-> Visitors ko **main network** access na mile.
+> Visitors cannot access the **main network**.
 
 ---
 
@@ -551,17 +551,17 @@ Home_WiFi
 ```
 
 ### Action:
-> Hide kar sakte ho.
+> You can hide it.
 
 ### ⚠️ Note:
-> Professional hackers **fir bhi detect** kar sakte hain.
+> Professional hackers **can still detect** it.
 
 ---
 
 ## 8. 📶 Reduce Signal Range
 
 ### Goal:
-> Signal ghar ke **bahar kam** jana chahiye.
+> Signal should **not reach outside** the home.
 
 ### Benefits:
 - ✅ Less Exposure
@@ -572,7 +572,7 @@ Home_WiFi
 ## 9. 🔒 Use VPN
 
 ### When to Use:
-> Public WiFi use karte waqt.
+> When using public WiFi.
 
 ### Example:
 ```
@@ -580,14 +580,14 @@ Airport WiFi ✈️
 ```
 
 ### Benefit:
-> VPN data **encrypt** karta hai.
+> VPN **encrypts** your data.
 
 ---
 
 ## 10. 📝 MAC Address Filtering
 
 ### How It Works:
-> Sirf **approved devices** connect kar sakte hain.
+> Only **approved devices** can connect.
 
 ### Example:
 ```
@@ -596,7 +596,7 @@ AA:BB:CC:DD → Allowed ✅
 ```
 
 ### ⚠️ Limitation:
-> **MAC Spoofing** possible hai.
+> **MAC Spoofing** is possible.
 
 ---
 
@@ -634,7 +634,7 @@ AA:BB:CC:DD → Allowed ✅
 
 ## 🔐 Wireless Security Protocols
 
-> WiFi ko **secure** karte hain.
+> These secure WiFi networks.
 
 ---
 
@@ -875,10 +875,7 @@ WPA3 (2018) 🛡️ ──► Very Strong
 
 ## 🚀 Day 13 Golden Line
 
-> ### "Wireless Networking Devices Ko Bina Cable Connect Karta Hai, Lekin Strong Security Ke Liye Hamesha WPA3, Strong Password, Updated Firmware Aur Proper Monitoring Zaruri Hai."
-
-### Translation:
-> *"Wireless networking connects devices without cables, but for strong security, always use WPA3, strong passwords, updated firmware, and proper monitoring."*
+> ### "Wireless networking connects devices without cables, but for strong security, always use WPA3, strong passwords, updated firmware, and proper monitoring."
 
 ---
 

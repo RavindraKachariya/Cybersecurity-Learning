@@ -6,7 +6,7 @@
 
 ## 📚 Table of Contents
 
-1. [Network Monitoring Kya Hai?](#part-1--network-monitoring-kya-hai)
+1. [What is Network Monitoring?](#part-1--what-is-network-monitoring)
 2. [Network Monitoring Tools](#part-2--network-monitoring-tools)
 3. [Wireshark — The Packet Analyzer](#part-3--wireshark--the-packet-analyzer)
 4. [Ettercap — The Security Testing Tool](#part-4--ettercap--the-security-testing-tool)
@@ -16,7 +16,7 @@
 
 ---
 
-# Part 1 — Network Monitoring Kya Hai?
+# Part 1 — What is Network Monitoring?
 
 ## 🏥 Real Life Example — Hospital
 
@@ -60,11 +60,11 @@
 
 ---
 
-## ❓ Network Monitoring Kyu Zaruri Hai?
+## ❓ Why is Network Monitoring Important?
 
 ### Scenario:
 
-> Company me **500 computers** hain.
+> Company has **500 computers**.
 
 | Problem | Impact |
 |---------|--------|
@@ -83,7 +83,7 @@
 
 ---
 
-## 🔍 Monitoring Me Kya Check Hota Hai?
+## 🔍 What is Checked in Monitoring?
 
 ---
 
@@ -93,9 +93,9 @@
 
 | Question | What It Checks |
 |----------|----------------|
-| Router online hai? | Internet connectivity |
-| Switch online hai? | Local network connectivity |
-| Server online hai? | Services availability |
+| Is router online? | Internet connectivity |
+| Is switch online? | Local network connectivity |
+| Is server online? | Services availability |
 
 ---
 
@@ -105,9 +105,9 @@
 
 | Question | What It Shows |
 |----------|---------------|
-| Kitna use ho raha hai? | Current bandwidth usage |
-| Kaun use kar raha hai? | Top users |
-| Kaunsa app use kar raha hai? | Application usage |
+| How much is being used? | Current bandwidth usage |
+| Who is using it? | Top users |
+| Which app is using it? | Application usage |
 
 ---
 
@@ -117,9 +117,9 @@
 
 | Question | What It Shows |
 |----------|---------------|
-| Data kahan se aa raha hai? | Source IPs |
-| Data kahan ja raha hai? | Destination IPs |
-| Kaunsi service use ho rahi hai? | Protocols in use |
+| Where is data coming from? | Source IPs |
+| Where is data going? | Destination IPs |
+| Which service is being used? | Protocols in use |
 
 ---
 
@@ -163,7 +163,7 @@
 
 # Part 3 — Wireshark — The Packet Analyzer
 
-## 🔍 Wireshark Kya Hai?
+## 🔍 What is Wireshark?
 
 > **Wireshark** is the world's most popular **Packet Analyzer**.
 
@@ -182,7 +182,7 @@ Records everything
     ↓
 Can analyze later
 
-Wireshark = Network Ka CCTV Camera! 📹
+Wireshark = Network's CCTV Camera! 📹
 ```
 
 ### What It Does:
@@ -190,7 +190,7 @@ Wireshark = Network Ka CCTV Camera! 📹
 
 ---
 
-## 📦 Packet Kya Hota Hai?
+## 📦 What is a Packet?
 
 > Data travels on the internet in **small pieces** called **packets**.
 
@@ -231,7 +231,7 @@ Photo is complete!
 
 ### 1. 📥 Packet Capture
 
-> **Live network traffic** capture karta hai.
+> Captures **live network traffic**.
 
 ### How It Works:
 ```
@@ -253,7 +253,7 @@ Wireshark captures packets between them!
 
 ### 2. 🔬 Deep Packet Inspection
 
-> Packet ke **andar ki information** dikhata hai.
+> Shows **inside information** of the packet.
 
 ### Example Output:
 ```
@@ -277,7 +277,7 @@ Data: (Encrypted)
 
 ### 3. 🔗 Stream Reassembly
 
-> TCP packets ko jod kar **pura conversation** dikhata hai.
+> Combines TCP packets to show **complete conversation**.
 
 ### Example:
 ```
@@ -297,7 +297,7 @@ Wireshark shows: Complete communication!
 
 ### 4. 🎯 Filtering
 
-> Sirf **required packets** dekh sakte ho.
+> View only **required packets**.
 
 ### Example Filters:
 ```
@@ -323,7 +323,7 @@ Only GET requests
 
 ### 5. 📊 Statistics
 
-> Network ka **summary** deta hai.
+> Provides a **summary** of the network.
 
 ### Examples:
 | Stat | Shows |
@@ -340,8 +340,8 @@ Only GET requests
 
 | Use Case | Description |
 |----------|-------------|
-| 🛠️ **Troubleshooting** | Internet slow kyu hai? |
-| 🔐 **Security Investigation** | Attack kahan se aa raha hai? |
+| 🛠️ **Troubleshooting** | Why is the internet slow? |
+| 🔐 **Security Investigation** | Where is the attack coming from? |
 | 📡 **Protocol Analysis** | TCP, UDP, HTTP behavior |
 | 🧪 **Application Testing** | Developer application test |
 
@@ -349,7 +349,7 @@ Only GET requests
 
 # Part 4 — Ettercap — The Security Testing Tool
 
-## 🕵️ Ettercap Kya Hai?
+## 🕵️ What is Ettercap?
 
 > **Ettercap** is an Open Source Security Tool.
 
@@ -378,16 +378,16 @@ It is used for:
 
 ### 1. 📡 Packet Sniffing
 
-> Network traffic capture karta hai.
+> Captures network traffic.
 > Similar to Wireshark.
 
 ---
 
 ### 2. 🔄 Man In The Middle (MITM) Attack
 
-### MITM Kya Hai?
+### What is MITM?
 
-> Attacker beech me baith jata hai.
+> Attacker sits in the middle.
 
 #### Normal Flow:
 ```
@@ -409,12 +409,12 @@ User 👤 ────► Attacker 🕵️ ────► Router 📡
 
 ### 3. 🎭 ARP Poisoning
 
-> ARP Table ko manipulate karta hai.
+> Manipulates the ARP Table.
 
 ### How It Works:
 ```
 Attacker to Network:
-    "Main Hi Router Hu! 👋"
+    "I Am The Router! 👋"
     ↓
 All traffic sent to attacker
     ↓
@@ -428,14 +428,14 @@ Attacker intercepts everything
 
 # Part 5 — Common Network Problems
 
-## ⚠️ Network Admin Ka Sabse Important Kaam — Problems Solve Karna!
+## ⚠️ Network Admin's Most Important Job — Solving Problems!
 
 ---
 
 ### 1. 📡 Connectivity Issue
 
 #### Meaning:
-> Device network se connect nahi ho raha.
+> Device is not connecting to the network.
 
 #### Causes:
 | Cause | Description |
@@ -451,7 +451,7 @@ Cable Cut ✂️
     ↓
 No Internet ❌
     ↓
-User: "Internet kyu nahi chal raha?"
+User: "Why isn't the internet working?"
 ```
 
 ---
@@ -459,7 +459,7 @@ User: "Internet kyu nahi chal raha?"
 ### 2. 🐌 Slow Network Performance
 
 #### Meaning:
-> Internet chal raha hai lekin **bahut slow** hai.
+> Internet is working but **very slow**.
 
 #### Causes:
 | Cause | Description |
@@ -482,7 +482,7 @@ Everyone complaining! 😤
 
 ### 3. ⚡ IP Address Conflict
 
-> Do devices ko **same IP address** mil jaye.
+> Two devices get the **same IP address**.
 
 #### Example:
 ```
@@ -504,9 +504,9 @@ Network errors occur
 
 #### Symptoms:
 ```
-Google open nahi ho raha ❌
+Google isn't opening ❌
     ↓
-But ping 8.8.8.8 working ✅
+But ping 8.8.8.8 works ✅
     ↓
 DNS problem! 🎯
 ```
@@ -579,7 +579,7 @@ Change Wi-Fi channel
 
 ### 7. 🔥 Firewall Issues
 
-> Firewall **security guard** ki tarah hota hai.
+> Firewall acts like a **security guard**.
 
 #### Problem:
 > Sometimes it incorrectly blocks **valid traffic**.
@@ -634,7 +634,7 @@ Need troubleshooting! 🔧
 ### 1. 🏓 Ping
 
 #### Purpose:
-> Check karta hai host **reachable** hai ya nahi.
+> Checks if a host is **reachable**.
 
 #### How It Works:
 ```bash
@@ -658,14 +658,14 @@ Request timed out.
 ❌ Host is NOT reachable!
 
 #### 🎯 Easy Definition:
-> **Ping = "Hello, Kya Tum Sun Rahe Ho?"**
+> **Ping = "Hello, Can You Hear Me?"**
 
 ---
 
 ### 2. 🔄 Traceroute / Tracert
 
 #### Purpose:
-> Dikhaata hai packet **kis-kis router** se guzra.
+> Shows which **routers** the packet passed through.
 
 #### Example:
 ```bash
@@ -687,14 +687,14 @@ tracert google.com
 - ✅ Troubleshoot routing issues
 
 #### 🎯 Easy Definition:
-> **Traceroute = Packet Ka GPS Tracking**
+> **Traceroute = Packet's GPS Tracking**
 
 ---
 
 ### 3. 📊 Netstat
 
 #### Purpose:
-> Current network connections dikhata hai.
+> Shows current network connections.
 
 #### Example:
 ```bash
@@ -720,7 +720,7 @@ netstat -an
 > Advanced Packet Analysis Tool.
 
 #### 🎯 Easy Definition:
-> **Wireshark = Network Ka Microscope**
+> **Wireshark = Network's Microscope**
 
 ### When to Use:
 - ✅ Deep packet inspection
@@ -732,7 +732,7 @@ netstat -an
 ### 5. 🔍 Nslookup
 
 #### Purpose:
-> DNS Query check karna.
+> Check DNS Query.
 
 #### Example:
 ```bash
@@ -835,10 +835,10 @@ dig google.com
 
 | Tool | What It Does |
 |------|--------------|
-| 🔍 **Wireshark** | Packets analyze karo |
-| 🕵️ **Ettercap** | Network security test karo |
-| 📊 **SolarWinds** | Network monitor karo |
-| 📡 **SNMP** | Devices monitor karo |
+| 🔍 **Wireshark** | Analyze packets |
+| 🕵️ **Ettercap** | Test network security |
+| 📊 **SolarWinds** | Monitor network |
+| 📡 **SNMP** | Monitor devices |
 
 ---
 
@@ -846,21 +846,18 @@ dig google.com
 
 | Tool | Question It Answers |
 |------|---------------------|
-| 🏓 **Ping** | "Device online hai ya nahi?" |
-| 🔄 **Tracert** | "Packet kahan-kahan gaya?" |
-| 📊 **Netstat** | "Kaunse ports open hain?" |
-| 🔍 **Nslookup** | "DNS sahi kaam kar raha hai?" |
-| 🔬 **Wireshark** | "Network me kya chal raha hai?" |
-| 📡 **SNMP** | "Router aur switch ki health kaisi hai?" |
+| 🏓 **Ping** | "Is the device online or not?" |
+| 🔄 **Tracert** | "Where did the packet go?" |
+| 📊 **Netstat** | "Which ports are open?" |
+| 🔍 **Nslookup** | "Is DNS working correctly?" |
+| 🔬 **Wireshark** | "What's happening on the network?" |
+| 📡 **SNMP** | "How is the router and switch health?" |
 
 ---
 
 ## 🚀 Day 8 Golden Line
 
-> ### 🔍 **"Monitoring problem hone se pehle warning deta hai, aur troubleshooting problem hone ke baad solution dhoondti hai."**
-
-### Translation:
-> *"Monitoring gives warnings before problems occur, and troubleshooting finds solutions after problems occur."*
+> ### 🔍 **"Monitoring gives warnings before problems occur, and troubleshooting finds solutions after problems occur."**
 
 ---
 

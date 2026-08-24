@@ -50,12 +50,12 @@
 
 # Part 2 — DHCP — Dynamic Host Configuration Protocol
 
-## 📡 DHCP Kya Hai?
+## 📡 What is DHCP?
 
 > DHCP is a protocol that **automatically provides network configuration**.
 
-### Simple Language:
-> 👉 **DHCP = Network Ka Property Dealer**
+### In Simple Words:
+> 👉 **DHCP = Network's Property Dealer**
 
 ### Analogy:
 > Like a property dealer allocates houses, DHCP allocates IP addresses on the network.
@@ -111,12 +111,12 @@ A = Acknowledge
 ## Step 1 — Discover 🔍
 
 ### What Happens:
-> Laptop network me connect hota hai. Usko IP nahi pata.
+> Laptop connects to the network. It doesn't have an IP.
 
 ### The Message:
 ```
 Client: "Hello DHCP Server!"
-Client: "Mujhe IP Address Chahiye!"
+Client: "I Need an IP Address!"
 ```
 
 > This message is called **DHCP Discover**.
@@ -126,11 +126,11 @@ Client: "Mujhe IP Address Chahiye!"
 ## Step 2 — Offer 💡
 
 ### What Happens:
-> DHCP Server reply karta hai with an available IP.
+> DHCP Server replies with an available IP.
 
 ### The Message:
 ```
-Server: "Mere Pass IP Available Hai!"
+Server: "I Have an Available IP!"
 Server: "192.168.1.100"
 ```
 
@@ -145,7 +145,7 @@ Server: "192.168.1.100"
 
 ### The Message:
 ```
-Client: "Mujhe Ye Wala IP Chahiye!"
+Client: "I Want This IP!"
 Client: "192.168.1.100"
 ```
 
@@ -161,7 +161,7 @@ Client: "192.168.1.100"
 ### The Message:
 ```
 Server: "Congratulations!"
-Server: "Ye IP Ab Tumhari Hai!"
+Server: "This IP is Now Yours!"
 ```
 
 > This message is called **DHCP Acknowledge**.
@@ -172,22 +172,22 @@ Server: "Ye IP Ab Tumhari Hai!"
 
 ### Discover:
 ```
-Customer: "Koi Room Khali Hai?"
+Customer: "Is any room available?"
 ```
 
 ### Offer:
 ```
-Reception: "Room 101 Available Hai!"
+Reception: "Room 101 is Available!"
 ```
 
 ### Request:
 ```
-Customer: "Mujhe Room 101 Chahiye!"
+Customer: "I want Room 101!"
 ```
 
 ### Acknowledge:
 ```
-Reception: "Room 101 Aapko Allot Kar Diya!"
+Reception: "Room 101 has been allocated to you!"
 ```
 
 > DHCP works **exactly like this**!
@@ -204,16 +204,16 @@ Reception: "Room 101 Aapko Allot Kar Diya!"
 │  CLIENT                           DHCP SERVER              │
 │                                                             │
 │  ─────────── DISCOVER ──────────►                         │
-│   "Koi DHCP server available?"                             │
+│   "Is any DHCP server available?"                          │
 │                                                             │
 │  ◄─────────── OFFER ─────────────                         │
-│   "Ye IP le lo: 192.168.1.100"                             │
+│   "Take this IP: 192.168.1.100"                            │
 │                                                             │
 │  ─────────── REQUEST ──────────►                         │
-│   "Mujhe ye IP chahiye"                                    │
+│   "I want this IP"                                         │
 │                                                             │
 │  ◄────────── ACKNOWLEDGE ──────                         │
-│   "Done! IP assign ho gaya"                                │
+│   "Done! IP is assigned"                                   │
 │                                                             │
 │  ✅ IP Address: 192.168.1.100                              │
 │  ✅ Subnet Mask: 255.255.255.0                             │
@@ -227,12 +227,12 @@ Reception: "Room 101 Aapko Allot Kar Diya!"
 
 # Part 4 — DNS — Domain Name System
 
-## 🌍 DNS Kya Hai?
+## 🌍 What is DNS?
 
 > DNS converts **domain names** to **IP addresses**.
 
-### Simple Language:
-> 👉 **DNS = Internet Ki Phone Book**
+### In Simple Words:
+> 👉 **DNS = Internet's Phone Book**
 
 ---
 
@@ -307,7 +307,7 @@ If IP not found: ➡️ Continue to Step 3
 ## Step 4 — Root DNS Server
 
 ```
-Root Server: ".com Server Se Pucho"
+Root Server: "Ask the .com Server"
 ```
 
 ---
@@ -315,7 +315,7 @@ Root Server: ".com Server Se Pucho"
 ## Step 5 — TLD Server (.com)
 
 ```
-TLD Server: "Google Ka Authoritative Server Yaha Hai"
+TLD Server: "Google's Authoritative Server is Here"
 ```
 
 ---
@@ -323,7 +323,7 @@ TLD Server: "Google Ka Authoritative Server Yaha Hai"
 ## Step 6 — Authoritative DNS Server
 
 ```
-Authoritative Server: "google.com ka IP hai: 142.250.xxx.xxx"
+Authoritative Server: "google.com's IP is: 142.250.xxx.xxx"
 ```
 
 ---
@@ -345,23 +345,23 @@ Browser gets IP → Connects → Website opens!
 │                                                             │
 │  USER 👤                                                   │
 │   │                                                         │
-│   │ "google.com ka IP kya hai?"                            │
+│   │ "What is google.com's IP?"                             │
 │   ▼                                                         │
 │  LOCAL CACHE 💾                                            │
 │   │                                                         │
-│   │ "Cache me nahi mila"                                   │
+│   │ "Not found in cache"                                   │
 │   ▼                                                         │
 │  DNS RESOLVER 🔍                                           │
 │   │                                                         │
-│   │ "Root server, .com server kahan hai?"                  │
+│   │ "Root server, where is the .com server?"               │
 │   ▼                                                         │
 │  ROOT SERVER 🌳                                            │
 │   │                                                         │
-│   │ ".com server ka address lo"                           │
+│   │ "Here is the .com server's address"                    │
 │   ▼                                                         │
 │  TLD SERVER (.com) 📋                                      │
 │   │                                                         │
-│   │ "google.com ka authoritative server ye hai"           │
+│   │ "Here is google.com's authoritative server"            │
 │   ▼                                                         │
 │  AUTHORITATIVE SERVER 🖥️                                  │
 │   │                                                         │
@@ -376,17 +376,17 @@ Browser gets IP → Connects → Website opens!
 
 ## 🎯 Easy Trick
 
-> ### DNS = Naam Se Number Dhoondna (Find Number from Name)
+> ### DNS = Find Number from Name
 
 ---
 
 # Part 6 — NAT — Network Address Translation
 
-## 🌐 NAT Kya Hai?
+## 🌐 What is NAT?
 
 > NAT converts **private IPs** to **public IPs**.
 
-### Simple Language:
+### In Simple Words:
 > 👉 **NAT = Translator**
 
 ---
@@ -476,7 +476,7 @@ Private IPs:            Public IP:
 ## 2. 🔄 Dynamic NAT
 
 ### Meaning
-> Public IP **pool** se random public IP assign hota hai.
+> Public IP from a **pool** is assigned randomly.
 
 ### Example:
 
@@ -499,7 +499,7 @@ Private IPs:            Public IP:
 - ✅ Multiple public IPs available
 
 ### 🎯 Easy Trick:
-> **Dynamic = Change Hota Rahe (Keeps Changing)**
+> **Dynamic = Keeps Changing**
 
 ---
 
@@ -514,7 +514,7 @@ Private IPs:            Public IP:
 
 # Part 8 — PAT — Port Address Translation
 
-## 🚀 PAT Kya Hai?
+## 🚀 What is PAT?
 
 > PAT allows **multiple private devices** to share **one public IP** using different ports.
 
@@ -615,13 +615,13 @@ Flat 103 = Port 5003 → TV
 
 ---
 
-### Q1. DHCP Ka Full Form?
+### Q1. What is the full form of DHCP?
 
 > **D**ynamic **H**ost **C**onfiguration **P**rotocol
 
 ---
 
-### Q2. DORA Ka Full Form?
+### Q2. What is the full form of DORA?
 
 | Letter | Word |
 |--------|------|
@@ -632,9 +632,9 @@ Flat 103 = Port 5003 → TV
 
 ---
 
-### Q3. DNS Kya Karta Hai?
+### Q3. What does DNS do?
 
-> Domain Name ko **IP Address** me convert karta hai.
+> Converts Domain Names to **IP Addresses**.
 
 ### Example:
 ```
@@ -643,21 +643,21 @@ google.com → 142.250.xxx.xxx
 
 ---
 
-### Q4. NAT Ka Full Form?
+### Q4. What is the full form of NAT?
 
 > **N**etwork **A**ddress **T**ranslation
 
 ---
 
-### Q5. PAT Ka Full Form?
+### Q5. What is the full form of PAT?
 
 > **P**ort **A**ddress **T**ranslation
 
 ---
 
-### Q6. Static NAT Kya Hai?
+### Q6. What is Static NAT?
 
-> Same private IP hamesha **same public IP** me convert hota hai.
+> Same private IP always translates to the **same public IP**.
 
 ### Example:
 ```
@@ -666,9 +666,9 @@ google.com → 142.250.xxx.xxx
 
 ---
 
-### Q7. Dynamic NAT Kya Hai?
+### Q7. What is Dynamic NAT?
 
-> Public IP **pool** se random public IP assign hota hai.
+> Random public IP from a **pool** is assigned.
 
 ### Example:
 ```
@@ -678,9 +678,9 @@ google.com → 142.250.xxx.xxx
 
 ---
 
-### Q8. PAT Kyu Use Hota Hai?
+### Q8. Why is PAT used?
 
-> **Multiple devices** ko **one public IP** share karane ke liye.
+> To allow **multiple devices** to share **one public IP**.
 
 ### Example:
 ```
@@ -691,9 +691,9 @@ All share: 49.36.xx.xx
 
 ---
 
-### Q9. DNS Ko Internet Ki Phone Book Kyu Kehte Hain?
+### Q9. Why is DNS called the Internet's Phone Book?
 
-> Kyuki ye **domain name** ko **IP address** me convert karta hai.
+> Because it converts **domain names** to **IP addresses**.
 
 ### Analogy:
 ```
@@ -703,7 +703,7 @@ Domain: google.com → IP: 142.250.xxx.xxx
 
 ---
 
-### Q10. DHCP Kya Assign Karta Hai?
+### Q10. What does DHCP assign?
 
 | Setting | Example |
 |---------|---------|
@@ -719,7 +719,7 @@ Domain: google.com → IP: 142.250.xxx.xxx
 ## 📋 Ultimate Day 10 Revision
 
 ### DHCP
-> Automatically **IP Deta Hai** (Gives IP)
+> Automatically **Gives IP**
 
 ### DORA
 > **D**iscover → **O**ffer → **R**equest → **A**cknowledge
@@ -755,10 +755,7 @@ Domain: google.com → IP: 142.250.xxx.xxx
 
 ## 🚀 Day 10 Golden Line
 
-> ### "DHCP Device Ko Address Deta Hai, DNS Address Dhoondta Hai, NAT Address Translate Karta Hai Aur PAT Multiple Devices Ko Ek Public Address Share Karne Deta Hai."
-
-### Translation:
-> *"DHCP gives addresses to devices, DNS finds addresses, NAT translates addresses, and PAT lets multiple devices share one public address!"*
+> ### "DHCP gives addresses to devices, DNS finds addresses, NAT translates addresses, and PAT lets multiple devices share one public address!"
 
 ---
 
@@ -766,10 +763,10 @@ Domain: google.com → IP: 142.250.xxx.xxx
 
 | Service | One Line |
 |---------|----------|
-| **DHCP** | "Mujhe ek IP de do" |
-| **DNS** | "Mujhe website ka IP batao" |
-| **NAT** | "Private IP ko public IP me badlo" |
-| **PAT** | "Sabko ek public IP de do" |
+| **DHCP** | "Give me an IP" |
+| **DNS** | "Tell me the website's IP" |
+| **NAT** | "Convert private IP to public IP" |
+| **PAT** | "Give everyone one public IP" |
 | **DORA** | "Discover → Offer → Request → Acknowledge" |
 
 ---

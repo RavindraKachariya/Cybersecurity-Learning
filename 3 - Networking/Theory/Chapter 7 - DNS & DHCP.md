@@ -22,9 +22,9 @@
 
 # Part 1 — DNS (Domain Name System)
 
-## 🌍 DNS Kya Hai?
+## 🌍 What is DNS?
 
-> **DNS** ek aisa system hai jo **Domain Name** ko **IP Address** me convert karta hai.
+> **DNS** is a system that converts **Domain Names** into **IP Addresses**.
 
 ### Problem Statement
 
@@ -42,7 +42,7 @@
 
 ### Easy Definition
 
-> 📖 **DNS = Internet ki Phone Book 📞**
+> 📖 **DNS = Internet's Phone Book 📞**
 
 | Phone Book | DNS |
 |------------|-----|
@@ -88,7 +88,7 @@ Your browser opens the website
 Student: Rahul
 Roll No: 10
 
-DNS: "Rahul ka roll number kya hai?"
+DNS: "What is Rahul's roll number?"
 Answer: "10"
 ```
 
@@ -96,7 +96,7 @@ Answer: "10"
 
 # Part 2 — DNS Components
 
-## 🧩 DNS Ki 3 Important Components
+## 🧩 3 Important DNS Components
 
 ---
 
@@ -109,7 +109,7 @@ Answer: "10"
 ### How It Works:
 
 ```
-User: "google.com ka IP kya hai?"
+User: "What is the IP of google.com?"
     ↓
 Resolver: "Wait, let me find out!"
     ↓
@@ -143,7 +143,7 @@ Resolver: "Here's the IP: 142.250.xxx.xxx"
 
 ## 3. DNS Records
 
-> DNS database me store information ko **DNS Records** kehte hain.
+> Information stored in the DNS database is called **DNS Records**.
 
 ---
 
@@ -268,7 +268,7 @@ NS2.example.com
 
 # Part 4 — DNS Resolution Process
 
-## 🔍 DNS Kaise Kaam Karta Hai?
+## 🔍 How DNS Works?
 
 ### Scenario:
 User types in browser:
@@ -282,7 +282,7 @@ www.google.com
 
 ### Step 1 — DNS Resolver
 ```
-User → "google.com ka IP kya hai?"
+User → "What is the IP of google.com?"
     ↓
 DNS Resolver receives the query
 ```
@@ -291,14 +291,14 @@ DNS Resolver receives the query
 ```
 Resolver → Root Server
     ↓
-Root Server → ".com server se pucho"
+Root Server → "Ask the .com server"
 ```
 
 ### Step 3 — TLD Server
 ```
 Resolver → TLD Server (.com)
     ↓
-TLD Server → "google.com ka authoritative server ye hai"
+TLD Server → "Here is google.com's authoritative server"
 ```
 
 ### Step 4 — Authoritative Server
@@ -326,23 +326,23 @@ Browser → Website opens!
 │                                                             │
 │  USER                                                      │
 │   │                                                         │
-│   │ "google.com ka IP kya hai?"                            │
+│   │ "What is the IP of google.com?"                        │
 │   ▼                                                         │
 │  DNS RESOLVER                                              │
 │   │                                                         │
-│   │ "Root server, .com server kahan hai?"                  │
+│   │ "Root server, where is the .com server?"               │
 │   ▼                                                         │
 │  ROOT SERVER                                               │
 │   │                                                         │
-│   │ ".com server ka address lo"                           │
+│   │ "Here is the address of .com server"                   │
 │   ▼                                                         │
 │  TLD SERVER (.com)                                         │
 │   │                                                         │
-│   │ "google.com ka authoritative server ye hai"           │
+│   │ "Here is google.com's authoritative server"            │
 │   ▼                                                         │
 │  AUTHORITATIVE SERVER                                      │
 │   │                                                         │
-│   │ "IP Address: 142.250.xxx.xxx"                         │
+│   │ "IP Address: 142.250.xxx.xxx"                          │
 │   ▼                                                         │
 │  USER's BROWSER                                            │
 │                                                             │
@@ -361,11 +361,11 @@ Browser → Website opens!
 
 ### 1. Recursive DNS Server
 
-> User ki taraf se **pura answer dhoondta hai**.
+> Finds the **complete answer** on behalf of the user.
 
 ### How It Works:
 ```
-User → "google.com ka IP do"
+User → "Give me the IP of google.com"
     ↓
 Recursive Server → Searches everywhere
     ↓
@@ -379,7 +379,7 @@ Recursive Server → "IP: 142.250.xxx.xxx"
 
 ### 2. Root DNS Server
 
-> **Sabse top level** DNS server.
+> **Top level** DNS server.
 
 ### Purpose:
 > Directs queries to the correct TLD server.
@@ -388,7 +388,7 @@ Recursive Server → "IP: 142.250.xxx.xxx"
 
 ### 3. TLD Server
 
-> **Top Level Domain** handle karta hai.
+> Handles **Top Level Domains**.
 
 ### Examples:
 ```
@@ -403,7 +403,7 @@ Recursive Server → "IP: 142.250.xxx.xxx"
 
 ### 4. Authoritative DNS Server
 
-> **Actual DNS Records** store karta hai.
+> Stores the **actual DNS Records**.
 
 ### Contains:
 - ✅ A Records
@@ -419,13 +419,13 @@ Recursive Server → "IP: 142.250.xxx.xxx"
 
 ### ⚠️ 1. DNS Spoofing
 
-> **Fake DNS response** bhejkar user ko **galat website** par bhejna.
+> Sending **fake DNS responses** to redirect users to **fake websites**.
 
 ### How It Works:
 ```
 User: "google.com?"
     ↓
-Attacker: "Google ka IP hai: 192.168.1.100"
+Attacker: "Google's IP is: 192.168.1.100"
     ↓
 User goes to FAKE website
     ↓
@@ -441,7 +441,7 @@ Credentials stolen! 🔐
 
 ### ⚠️ 2. DNS Poisoning
 
-> DNS cache me **fake records** store kar dena.
+> Storing **fake records** in DNS cache.
 
 ### How It Works:
 ```
@@ -463,7 +463,7 @@ Massive attack!
 
 ### ⚠️ 3. DNS Amplification Attack
 
-> DNS server ka misuse karke **DDoS attack** karna.
+> Misusing DNS server for **DDoS attacks**.
 
 ### How It Works:
 ```
@@ -510,9 +510,9 @@ Port 53
 
 # Part 6 — DHCP (Dynamic Host Configuration Protocol)
 
-## 📡 DHCP Kya Hai?
+## 📡 What is DHCP?
 
-> DHCP **automatically** network settings assign karta hai.
+> DHCP **automatically** assigns network settings.
 
 ---
 
@@ -552,13 +552,13 @@ Student → Riya → Gets Roll No: 12
 
 # Part 7 — DHCP Components
 
-## ⚙️ DHCP Ki 3 Important Components
+## ⚙️ 3 Important DHCP Components
 
 ---
 
 ### 1. DHCP Server
 
-> Jo **IP Assign** karta hai.
+> The one that **assigns IPs**.
 
 ### Example:
 ```
@@ -576,7 +576,7 @@ Assigns IPs to connected devices
 
 ### 2. DHCP Client
 
-> Jo **IP mangta hai**.
+> The one that **requests an IP**.
 
 ### Examples:
 | Device | Description |
@@ -595,7 +595,7 @@ Assigns IPs to connected devices
 
 ### 3. IP Address Pool
 
-> **IP Addresses ka stock**.
+> **Stock of IP Addresses**.
 
 ### Example Range:
 ```
@@ -619,9 +619,9 @@ Device 100 → Gets 192.168.1.199
 
 # Part 8 — DORA Process
 
-## 🚀 DHCP Ka Working Process — DORA
+## 🚀 DHCP Working Process — DORA
 
-> **DORA** DHCP ka complete working process hai.
+> **DORA** is the complete working process of DHCP.
 
 ```
 D = Discover
@@ -638,7 +638,7 @@ A = Acknowledge
 
 ### Step 1 — Discover 🔍
 
-> Client bolta hai: **"Koi DHCP Server Available Hai?"**
+> Client says: **"Is any DHCP Server Available?"**
 
 ```
 Client → "Is there any DHCP server?"
@@ -653,7 +653,7 @@ Client → "Is there any DHCP server?"
 
 ### Step 2 — Offer 💡
 
-> Server bolta hai: **"Ye IP Le Lo"**
+> Server says: **"Take this IP"**
 
 ```
 Server → "Take this IP: 192.168.1.101"
@@ -668,7 +668,7 @@ Server → "Take this IP: 192.168.1.101"
 
 ### Step 3 — Request 🙋
 
-> Client bolta hai: **"Mujhe Ye IP Chahiye"**
+> Client says: **"I Want This IP"**
 
 ```
 Client → "Yes, I want this IP: 192.168.1.101"
@@ -683,7 +683,7 @@ Client → "Yes, I want this IP: 192.168.1.101"
 
 ### Step 4 — Acknowledge ✅
 
-> Server bolta hai: **"Done, IP Assign Ho Gaya"**
+> Server says: **"Done, IP Assigned"**
 
 ```
 Server → "IP 192.168.1.101 is assigned to you!"
@@ -706,16 +706,16 @@ Server → "IP 192.168.1.101 is assigned to you!"
 │  CLIENT                           DHCP SERVER              │
 │                                                             │
 │  ─────────── DISCOVER ──────────►                         │
-│   "Koi DHCP server available?"                             │
+│   "Is any DHCP server available?"                          │
 │                                                             │
 │  ◄─────────── OFFER ─────────────                         │
-│   "Ye IP le lo: 192.168.1.101"                             │
+│   "Take this IP: 192.168.1.101"                            │
 │                                                             │
 │  ─────────── REQUEST ──────────►                         │
-│   "Mujhe ye IP chahiye"                                    │
+│   "I want this IP"                                         │
 │                                                             │
 │  ◄────────── ACKNOWLEDGE ──────                         │
-│   "Done! IP assign ho gaya"                                │
+│   "Done! IP is assigned"                                   │
 │                                                             │
 │  ✅ IP Address: 192.168.1.101                              │
 │  ✅ Subnet Mask: 255.255.255.0                             │
@@ -783,7 +783,7 @@ Client = 68
 
 ### 1. IP Conflict 💥
 
-> Do devices ko **same IP** mil jaye.
+> Two devices get the **same IP**.
 
 ### How It Happens:
 ```
@@ -807,7 +807,7 @@ Device 2: "I also have IP 192.168.1.10"
 
 ### 2. DHCP Server Down 💀
 
-> Server crash — kisi device ko IP nahi milega.
+> Server crash — no device gets an IP.
 
 ### Impact:
 - ❌ New devices can't join network
@@ -822,7 +822,7 @@ Device 2: "I also have IP 192.168.1.10"
 
 ### 3. Wrong Scope 🎯
 
-> **Galat IP range** configure kar di gayi.
+> **Incorrect IP range** configured.
 
 ### Example:
 ```
@@ -844,7 +844,7 @@ No one gets IP! ❌
 
 ### 4. Lease Expired ⏰
 
-> IP lease khatam hone par network issue aa sakta hai.
+> IP lease expiry can cause network issues.
 
 ### Symptoms:
 - ❌ Device loses IP
@@ -869,9 +869,9 @@ sudo dhclient      (Linux)
 
 ---
 
-### Q1. DNS Kya Hai?
+### Q1. What is DNS?
 
-> DNS (Domain Name System) **Domain Name** ko **IP Address** me convert karta hai.
+> DNS (Domain Name System) converts **Domain Name** to **IP Address**.
 
 ### Key Points:
 - ✅ Internet's phone book
@@ -880,9 +880,9 @@ sudo dhclient      (Linux)
 
 ---
 
-### Q2. DHCP Kya Hai?
+### Q2. What is DHCP?
 
-> DHCP (Dynamic Host Configuration Protocol) **automatically IP Address** assign karta hai.
+> DHCP (Dynamic Host Configuration Protocol) **automatically assigns IP Addresses**.
 
 ### Key Points:
 - ✅ Automatic IP assignment
@@ -892,9 +892,9 @@ sudo dhclient      (Linux)
 
 ---
 
-### Q3. DNS Ka Port Number?
+### Q3. What is DNS Port Number?
 
-> DNS ka port number: **53**
+> DNS port number: **53**
 
 ### Details:
 ```
@@ -904,9 +904,9 @@ TCP 53 → Large responses
 
 ---
 
-### Q4. DHCP Ka Port Number?
+### Q4. What is DHCP Port Number?
 
-> DHCP ka port number: **67 / 68**
+> DHCP port number: **67 / 68**
 
 ### Details:
 ```
@@ -916,7 +916,7 @@ Port 68 → DHCP Client
 
 ---
 
-### Q5. DORA Ka Full Form?
+### Q5. What is DORA Full Form?
 
 > **D**iscover → **O**ffer → **R**equest → **A**cknowledge
 
@@ -930,9 +930,9 @@ Acknowledge: Server assigns IP
 
 ---
 
-### Q6. A Record Kya Karta Hai?
+### Q6. What does an A Record do?
 
-> A Record **Domain** ko **IPv4 Address** se map karta hai.
+> A Record maps **Domain** to **IPv4 Address**.
 
 ### Example:
 ```
@@ -941,7 +941,7 @@ google.com → 142.250.xxx.xxx
 
 ---
 
-### Q7. MX Record Kya Hai?
+### Q7. What is MX Record?
 
 > MX Record = **Mail Exchange Record**
 
@@ -955,9 +955,9 @@ example.com → mail.example.com
 
 ---
 
-### Q8. DNS Spoofing Kya Hai?
+### Q8. What is DNS Spoofing?
 
-> DNS Spoofing = **Fake DNS response** bhejna.
+> DNS Spoofing = Sending **fake DNS responses**.
 
 ### How It Works:
 ```
@@ -972,7 +972,7 @@ Credentials stolen! 🔐
 
 ---
 
-### Q9. DHCP Lease Kya Hai?
+### Q9. What is DHCP Lease?
 
 > DHCP Lease = IP address **temporary allocation time**.
 
@@ -1009,7 +1009,7 @@ If not renewed, IP goes back to pool
 | **Port** | 53 | 67/68 |
 | **Protocol** | UDP/TCP | UDP |
 | **Analogy** | Phone Book | Roll Number |
-| **Use** | Website Open Karne Me Help | Network Join Karne Me Help |
+| **Use** | Helps Open Websites | Helps Join Network |
 | **Key Words** | Query, Resolution | DORA, Lease |
 
 ---
@@ -1017,13 +1017,13 @@ If not renewed, IP goes back to pool
 ## 🧠 Quick Memory Summary
 
 ```
-DNS = "Mujhe Website Ka IP Batao"
+DNS = "Tell Me the Website's IP"
     ↓
     Port 53
     ↓
-    Internet ki Phone Book 📞
+    Internet's Phone Book 📞
 
-DHCP = "Mujhe Ek IP De Do"
+DHCP = "Give Me an IP"
     ↓
     Port 67/68
     ↓
@@ -1034,8 +1034,8 @@ DHCP = "Mujhe Ek IP De Do"
 
 ## 💡 Day 7 Golden Lines
 
-> ### 🌐 DNS = Website Ka Address Dhoondta Hai
-> ### 📡 DHCP = Device Ko Address Deta Hai
+> ### 🌐 DNS = Finds the Website's Address
+> ### 📡 DHCP = Gives Address to the Device
 
 ---
 

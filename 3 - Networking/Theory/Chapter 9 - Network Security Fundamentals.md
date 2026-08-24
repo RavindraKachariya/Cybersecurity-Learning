@@ -28,9 +28,9 @@
 
 > **Network Security** is the practice of protecting networks, data, and systems from unauthorized access, attacks, misuse, and theft.
 
-### Simple Language:
+### In Simple Words:
 
-> 👉 **"Network Security = Network ki Security Guard"**
+> 👉 **"Network Security = Network's Security Guard"**
 
 ---
 
@@ -103,7 +103,7 @@
 
 ## 🔐 CIA Triad
 
-> Network Security ka **sabse important concept**!
+> The **most important concept** in Network Security!
 
 ### In Interviews:
 > This is one of the **most asked questions**!
@@ -123,10 +123,10 @@ A = Availability
 ## 1. 🔒 Confidentiality
 
 ### Meaning
-> Data sirf **authorized person** hi dekh sake.
+> Data can only be seen by **authorized people**.
 
 ### Key Point:
-> Unauthorized person data **nahi dekh sakta**.
+> Unauthorized people **cannot view** the data.
 
 ---
 
@@ -171,17 +171,17 @@ No third person can read them
 
 ### 🎯 Easy Trick
 
-> ### Confidentiality = Secret Safe Rakhna (Keep Secrets Safe)
+> ### Confidentiality = Keep Secrets Safe
 
 ---
 
 ## 2. ✅ Integrity
 
 ### Meaning
-> Data **accurate** aur **unchanged** rehna chahiye.
+> Data should remain **accurate** and **unchanged**.
 
 ### Key Point:
-> Koi **unauthorized modification** nahi hona chahiye.
+> No **unauthorized modifications** should occur.
 
 ---
 
@@ -228,17 +228,17 @@ If checksum changes: ❌ (Integrity broken)
 
 ### 🎯 Easy Trick
 
-> ### Integrity = Data Correct Rehna Chahiye (Data Must Remain Correct)
+> ### Integrity = Data Must Remain Correct
 
 ---
 
 ## 3. ⏰ Availability
 
 ### Meaning
-> Services aur resources **jab chahiye tab available** hone chahiye.
+> Services and resources should be **available when needed**.
 
 ### Key Point:
-> Users should be able to access services when needed.
+> Users should be able to access services at any time.
 
 ---
 
@@ -290,7 +290,7 @@ Available almost always!
 
 ### 🎯 Easy Trick
 
-> ### Availability = Service Hamesha Chalu Rahe (Service Must Always Be Available)
+> ### Availability = Service Must Always Be Available
 
 ---
 
@@ -298,15 +298,15 @@ Available almost always!
 
 | Principle | Meaning | Simple Word | How to Achieve |
 |-----------|---------|-------------|----------------|
-| **Confidentiality** | Data secret rakhna | Secret Safe | Encryption, Passwords |
-| **Integrity** | Data correct rakhna | Data Correct | Hashing, Signatures |
-| **Availability** | Service available rakhna | Always Available | Backups, Redundancy |
+| **Confidentiality** | Keep data secret | Secret Safe | Encryption, Passwords |
+| **Integrity** | Keep data correct | Data Correct | Hashing, Signatures |
+| **Availability** | Keep service available | Always Available | Backups, Redundancy |
 
 ---
 
 # Part 3 — ISO Security Standards
 
-## 🌍 ISO Kya Hai?
+## 🌍 What is ISO?
 
 > **ISO = International Organization for Standardization**
 
@@ -318,10 +318,10 @@ Available almost always!
 ## 📄 ISO 27001
 
 ### Purpose
-> **Information Security Management System (ISMS)** implement karne ka standard.
+> Standard for implementing an **Information Security Management System (ISMS)**.
 
-### Simple Language:
-> Company ko **security kaise manage** karni hai ye batata hai.
+### In Simple Words:
+> Tells companies **how to manage security**.
 
 ### What It Covers:
 | Aspect | Description |
@@ -336,11 +336,11 @@ Available almost always!
 ## 📄 ISO 27002
 
 ### Purpose
-> **Security Controls** implement karne ki **guidelines**.
+> **Guidelines** for implementing **Security Controls**.
 
-### Simple Language:
-> - ISO 27001 bolta hai: **"Security Implement Karo"**
-> - ISO 27002 batata hai: **"Kaise Implement Karna Hai"**
+### In Simple Words:
+> - ISO 27001 says: **"Implement Security"**
+> - ISO 27002 says: **"How to Implement It"**
 
 ---
 
@@ -361,11 +361,11 @@ Available almost always!
 ## 🔑 What is Access Control?
 
 > **Access Control** decides:
-> - 👤 **Kaun?** (Who)
-> - 📂 **Kya Access Karega?** (What)
-> - 🕐 **Kab Access Karega?** (When)
+> - 👤 **Who?**
+> - 📂 **What will they access?**
+> - 🕐 **When will they access?**
 
-### Simple Language:
+### In Simple Words:
 > 👉 **"Access Control = Permission System"**
 
 ---
@@ -400,10 +400,10 @@ Available almost always!
 ## 1. 🔒 MAC (Mandatory Access Control)
 
 ### Meaning
-> **Administrator** permissions control karta hai.
+> **Administrator** controls all permissions.
 
 ### Key Point:
-> Users permissions **change nahi kar sakte**.
+> Users **cannot change** permissions.
 
 ---
 
@@ -437,7 +437,7 @@ Access is decided by admin only!
 ## 2. 🔓 DAC (Discretionary Access Control)
 
 ### Meaning
-> **Resource Owner** decide karega kaun access karega.
+> **Resource Owner** decides who can access.
 
 ### Key Point:
 > Owner has **discretion** (choice) over permissions.
@@ -474,7 +474,7 @@ You decide who can access:
 ## 3. 👔 RBAC (Role Based Access Control)
 
 ### Meaning
-> Access user ke **role** par depend karta hai.
+> Access depends on the user's **role**.
 
 ### Key Point:
 > Different roles = Different permissions.
@@ -524,7 +524,7 @@ You decide who can access:
 ## 4. 📊 ABAC (Attribute Based Access Control)
 
 ### Meaning
-> Access **attributes** ke basis par diya jata hai.
+> Access is given based on **attributes**.
 
 ### Key Point:
 > Multiple conditions must be met.
@@ -580,12 +580,12 @@ Access Denied ❌
 
 # Part 6 — VPN — Virtual Private Network
 
-## 🌐 VPN Kya Hai?
+## 🌐 What is VPN?
 
-> VPN internet par ek **secure encrypted tunnel** banata hai.
+> VPN creates a **secure encrypted tunnel** over the internet.
 
-### Simple Language:
-> 👉 **VPN = Private Tunnel Through Public Internet**
+### In Simple Words:
+> 👉 **"VPN = Private Tunnel Through Public Internet"**
 
 ---
 
@@ -661,9 +661,9 @@ Coffee Shop WiFi ☕
 
 # Part 7 — Proxy Server
 
-## 🔄 Proxy Kya Hai?
+## 🔄 What is Proxy?
 
-> Proxy client aur internet ke beech **middleman** hota hai.
+> Proxy is a **middleman** between the client and the internet.
 
 ---
 
@@ -741,19 +741,19 @@ Internet 🌐
 
 ### Proxy = Mask
 ```
-Mask Pehen Kar Ghar Se Bahar Jana
+Going out wearing a mask
     ↓
-Log Face Nahi Dekhenge
+People can't see your face
     ↓
-But body is not protected!
+But your body is not protected!
 ```
 
 ### VPN = Mask + Armor
 ```
 Mask + Bulletproof Jacket
     ↓
-Identity Bhi Hide ✅
-Data Bhi Safe ✅
+Identity Hidden ✅
+Data Safe ✅
 ```
 
 ---
@@ -988,9 +988,9 @@ Internet 🌐
 
 ### CIA Triad
 ```
-C → Confidentiality → Secret Safe
-I → Integrity → Data Correct
-A → Availability → Service Available
+C → Confidentiality → Keep Secrets Safe
+I → Integrity → Keep Data Correct
+A → Availability → Keep Service Available
 ```
 
 ---
@@ -1027,7 +1027,7 @@ ABAC → Access Based On Conditions
 
 ## 🚀 Day 9 Golden Line
 
-> ### "Network Security Ka Goal Hai Data Ko Secret, Correct Aur Available Rakhna."
+> ### "The goal of Network Security is to keep data Secret, Correct, and Available."
 
 ### In Simple Words:
 ```
@@ -1036,7 +1036,7 @@ Integrity = Correct ✅
 Availability = Always Available ⏰
 ```
 
-> ### "VPN Protect Karta Hai, Proxy Redirect Karta Hai."
+> ### "VPN Protects, Proxy Redirects."
 
 ---
 
@@ -1044,11 +1044,11 @@ Availability = Always Available ⏰
 
 | Concept | One Line Summary |
 |---------|------------------|
-| **Network Security** | Network ko attacks se protect karna |
+| **Network Security** | Protecting networks from attacks |
 | **CIA Triad** | Confidentiality, Integrity, Availability |
-| **Confidentiality** | Secret safe rakhna |
-| **Integrity** | Data correct rakhna |
-| **Availability** | Service hamesha available rakhna |
+| **Confidentiality** | Keep secrets safe |
+| **Integrity** | Keep data correct |
+| **Availability** | Keep services always available |
 | **ISO 27001** | Security management standard |
 | **MAC** | Admin controls everything |
 | **DAC** | Owner controls access |

@@ -25,12 +25,12 @@
 
 # Part 1 — What is a Subnet?
 
-## 🌐 Subnet Kya Hai?
+## 🌐 What is a Subnet?
 
-> **Subnet** ka full form hai: **Sub Network**
+> **Subnet** stands for: **Sub Network**
 
 ### Definition:
-> Subnet ek bada network ka **chhota part** hota hai.
+> A subnet is a **smaller part** of a larger network.
 
 ---
 
@@ -77,9 +77,9 @@ These are all SUBNETS! ✅
 
 # Part 2 — What is Subnetting?
 
-## 🔥 Subnetting Kya Hai?
+## 🔥 What is Subnetting?
 
-> Subnetting ka matlab hai: **Ek bade network ko chhote-chhote networks me divide karna.**
+> Subnetting means: **Dividing a large network into smaller networks.**
 
 ---
 
@@ -95,7 +95,7 @@ Cut into 8 slices
 🍕🍕🍕🍕🍕🍕🍕🍕 (8 Smaller Networks)
 ```
 
-> **Subnetting = Network ka Pizza Cutting!** 🍕
+> **Subnetting = Network's Pizza Cutting!** 🍕
 
 ---
 
@@ -238,7 +238,7 @@ NNNNNNNN.NNNNNNNN.NNNNNNNN.HHHHHHHH
 
 ## 🔑 Network ID
 
-> Batata hai device **kis network** me hai.
+> Tells which **network** the device belongs to.
 
 ### Example:
 ```
@@ -250,7 +250,7 @@ NNNNNNNN.NNNNNNNN.NNNNNNNN.HHHHHHHH
 
 ## 👤 Host ID
 
-> Specific device ko **identify** karta hai.
+> **Identifies** the specific device.
 
 ### Example:
 ```
@@ -276,9 +276,9 @@ NNNNNNNN.NNNNNNNN.NNNNNNNN.HHHHHHHH
 
 # Part 6 — Subnet Mask
 
-## 🎭 Subnet Mask Kya Hai?
+## 🎭 What is a Subnet Mask?
 
-> Subnet Mask **network** aur **host** portion ko **separate** karta hai.
+> Subnet Mask **separates** the network and host portions.
 
 ---
 
@@ -331,7 +331,7 @@ NNNNNNNN.NNNNNNNN.NNNNNNNN.HHHHHHHH
 
 # Part 7 — CIDR Notation
 
-## 📏 CIDR Kya Hai?
+## 📏 What is CIDR?
 
 > **CIDR** = Classless Inter-Domain Routing
 
@@ -370,7 +370,7 @@ Host Bits = 32 - CIDR
 
 ## 🔄 The Process
 
-> Subnetting me **host bits borrow** karte hain.
+> In subnetting, we **borrow host bits**.
 
 ---
 
@@ -818,9 +818,9 @@ Block: 256 - 192 = 64
 | Concept | Meaning |
 |---------|---------|
 | **Subnet** | Small Network |
-| **Subnetting** | Large Network Divide Karna |
+| **Subnetting** | Dividing a Large Network |
 | **CIDR** | Network Bits Count |
-| **Subnet Mask** | Network + Host Separate |
+| **Subnet Mask** | Separates Network + Host |
 | **Block Size** | Address Range Per Subnet |
 
 ---
@@ -851,10 +851,7 @@ Block: 256 - 192 = 64
 
 ## 🚀 Day 12 Golden Line
 
-> ### "Subnetting Ka Goal Hai Bade Network Ko Chhote, Fast, Secure Aur Easily Manageable Networks Me Divide Karna."
-
-### Translation:
-> *"The goal of subnetting is to divide a large network into smaller, faster, more secure, and easily manageable networks."*
+> ### "The goal of subnetting is to divide a large network into smaller, faster, more secure, and easily manageable networks."
 
 ---
 
@@ -862,10 +859,10 @@ Block: 256 - 192 = 64
 
 | Concept | One Line |
 |---------|----------|
-| **Subnet** | Chhota Network 🌐 |
+| **Subnet** | Small Network 🌐 |
 | **Subnet Mask** | Divider 🎭 |
 | **CIDR** | Network Bits 📏 |
-| **Subnetting** | Network Ka Smart Partitioning 🚀 |
+| **Subnetting** | Smart Network Partitioning 🚀 |
 
 ---
 

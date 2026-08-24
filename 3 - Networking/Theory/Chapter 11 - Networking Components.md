@@ -21,12 +21,12 @@
 
 # Chapter 1 — Router
 
-## 🌐 Router Kya Hai?
+## 🌐 What is a Router?
 
-> Router ek **Layer 3** networking device hai jo **do ya zyada networks ko connect karta hai** aur data packets ko correct destination tak pahunchata hai.
+> A router is a **Layer 3** networking device that **connects two or more networks** and forwards data packets to the correct destination.
 
-### Simple Language:
-> 👉 **Router = Network ka Traffic Police**
+### In Simple Words:
+> 👉 **Router = Network's Traffic Police**
 
 ### Analogy:
 > Like traffic police directs vehicles to the correct road, a router directs data to the correct network.
@@ -51,11 +51,11 @@ YouTube Server 🖥️
 
 ---
 
-## 🔑 Router Ka Main Kaam
+## 🔑 Main Functions of a Router
 
-### 1. 🌐 Internet Connection Provide Karna
+### 1. 🌐 Provide Internet Connection
 
-> Router home network ko ISP se connect karta hai.
+> Router connects the home network to the ISP.
 
 ```
 Home Network 🏠
@@ -71,7 +71,7 @@ Internet 🌍
 
 ### 2. 🗺️ Routing
 
-> Source IP aur Destination IP dekhkar **best path** select karta hai.
+> Looks at Source IP and Destination IP to select the **best path**.
 
 #### Example:
 ```
@@ -120,7 +120,7 @@ Layer 3
 
 ## 🎯 Interview Question
 
-### Q: Router MAC Address Dekhta Hai Ya IP?
+### Q: Does Router Look at MAC Address or IP?
 
 > ✅ **IP Address**
 
@@ -131,14 +131,14 @@ Layer 3
 
 # Chapter 2 — Switch
 
-## 🔀 Switch Kya Hai?
+## 🔀 What is a Switch?
 
-> Switch ek **Layer 2** networking device hai jo **same LAN** ke devices ko connect karta hai.
+> A switch is a **Layer 2** networking device that connects devices within the **same LAN**.
 
 ### Key Difference:
 ```
-Router = Networks Connect Karta Hai
-Switch = Devices Connect Karta Hai
+Router = Connects Networks
+Switch = Connects Devices
 ```
 
 ---
@@ -157,7 +157,7 @@ Server 🖥️
 
 ---
 
-## 🔑 Switch Ka Main Kaam
+## 🔑 Main Functions of a Switch
 
 ### 1. 📱 Device Communication
 
@@ -173,7 +173,7 @@ PC2 💻
 
 ---
 
-### 2. 📋 MAC Address Table Maintain Karna
+### 2. 📋 Maintain MAC Address Table
 
 > Switch remembers which MAC address is on which port.
 
@@ -236,12 +236,12 @@ Layer 2
 
 # Chapter 3 — Hub
 
-## 📡 Hub Kya Hai?
+## 📡 What is a Hub?
 
-> Hub sabse **basic** networking device hai.
+> A hub is the most **basic** networking device.
 
 ### How It Works:
-> Data receive karke **sabhi ports par broadcast** kar deta hai.
+> Receives data and **broadcasts** it to all ports.
 
 ---
 
@@ -268,7 +268,7 @@ PC5 💻
 
 ### Teacher in Classroom:
 ```
-Teacher: "Homework Complete Karo!"
+Teacher: "Complete Your Homework!"
     ↓
 Entire class hears it!
 ```
@@ -299,25 +299,25 @@ Layer 1
 
 ## 🔐 Cyber Security Risk
 
-> Hub sab traffic broadcast karta hai.
+> Hub broadcasts all traffic to everyone.
 
 ### Result:
-> Attacker easily perform **packet sniffing** and see all traffic!
+> Attacker can easily perform **packet sniffing** and see all traffic!
 
 ---
 
 # Chapter 4 — Modem
 
-## 📶 Modem Kya Hai?
+## 📶 What is a Modem?
 
-> **Modem** ka full form:
+> **Modem** full form:
 
 ```
 MOdulator + DEModulator
 ```
 
 ### Function:
-> Modem ISP aur Router ke beech **bridge** ka kaam karta hai.
+> Modem acts as a **bridge** between ISP and Router.
 
 ---
 
@@ -335,11 +335,11 @@ Device Language 💻
 
 ---
 
-## 🔑 Modem Ka Kaam
+## 🔑 Modem Function
 
 ### Signal Conversion
 
-> ISP signal ko **digital data** me convert karta hai.
+> Converts ISP signal to **digital data**.
 
 ---
 
@@ -381,9 +381,9 @@ Laptop 💻
 
 # Chapter 5 — Gateway
 
-## 🚪 Gateway Kya Hai?
+## 🚪 What is a Gateway?
 
-> Gateway **do different networks** ke beech **translator** ka kaam karta hai.
+> A gateway acts as a **translator** between **two different networks**.
 
 ---
 
@@ -402,7 +402,7 @@ Communication Possible! ✅
 
 ---
 
-## 🔑 Gateway Ka Kaam
+## 🔑 Gateway Functions
 
 ### 1. Protocol Translation
 
@@ -418,13 +418,13 @@ Network B
 
 ### 2. Entry & Exit Point
 
-> Network ka **main exit point** hota hai.
+> Acts as the network's **main exit point**.
 
 ---
 
 ## 🏠 Default Gateway
 
-> Most common gateway is the **Router**.
+> The most common gateway is the **Router**.
 
 #### Example:
 ```
@@ -450,9 +450,9 @@ Gateway = 192.168.1.1
 
 # Chapter 6 — Firewall
 
-## 🛡️ Firewall Kya Hai?
+## 🛡️ What is a Firewall?
 
-> Firewall ek **security device** ya **software** hai jo network traffic ko **monitor** aur **filter** karta hai.
+> A firewall is a **security device** or **software** that **monitors** and **filters** network traffic.
 
 ---
 
@@ -468,19 +468,19 @@ Unknown Person ❌ → Block
 
 ---
 
-## 🔑 Firewall Ka Kaam
+## 🔑 Firewall Functions
 
 ### 1. ✅ Allow Traffic
 
-> Trusted traffic allow karta hai.
+> Allows trusted traffic.
 
 ### 2. ❌ Block Traffic
 
-> Malicious traffic block karta hai.
+> Blocks malicious traffic.
 
 ### 3. 🔍 Monitor Traffic
 
-> Incoming aur outgoing packets inspect karta hai.
+> Inspects incoming and outgoing packets.
 
 ---
 
@@ -517,7 +517,7 @@ Layer 3 to Layer 7
 
 ## 🔐 Cyber Security Importance
 
-> Firewall network ki **first line of defense** hai.
+> Firewall is the network's **first line of defense**.
 
 ### Protects Against:
 | Threat | Description |
@@ -531,9 +531,9 @@ Layer 3 to Layer 7
 
 # Chapter 7 — Access Point
 
-## 📶 Access Point (AP) Kya Hai?
+## 📶 What is an Access Point (AP)?
 
-> Access Point **wired network** ko **wireless network** me convert karta hai.
+> An Access Point converts a **wired network** into a **wireless network**.
 
 ---
 
@@ -565,19 +565,19 @@ WiFi Devices 📱💻
 
 ---
 
-## 🔑 Access Point Ka Kaam
+## 🔑 Access Point Functions
 
-### 1. 📶 WiFi Provide Karna
+### 1. 📶 Provide WiFi
 
-> Wireless devices connect to the network.
+> Allows wireless devices to connect to the network.
 
-### 2. 📡 Coverage Extend Karna
+### 2. 📡 Extend Coverage
 
 > Large offices use multiple APs.
 
 ### 3. 🔗 Wireless Bridge
 
-> Wireless devices ko LAN se connect karta hai.
+> Connects wireless devices to the LAN.
 
 ---
 
@@ -585,9 +585,9 @@ WiFi Devices 📱💻
 
 | Router | Access Point |
 |--------|--------------|
-| Network Connect Karta Hai | WiFi Provide Karta Hai |
-| DHCP Kar Sakta Hai | Usually DHCP Nahi |
-| Routing Karta Hai | Routing Nahi Karta |
+| Connects Networks | Provides WiFi |
+| Can Do DHCP | Usually Doesn't Do DHCP |
+| Does Routing | Doesn't Do Routing |
 
 ---
 
@@ -652,25 +652,25 @@ WiFi Devices 📱💻
 
 ---
 
-### Q1. Router Kis Layer Par Kaam Karta Hai?
+### Q1. Which Layer Does a Router Work On?
 
-> Router **Layer 3 (Network Layer)** par kaam karta hai.
+> A router works on **Layer 3 (Network Layer)**.
 
 ### Reason:
 > Router works with **IP addresses**.
 
 ---
 
-### Q2. Switch MAC Ya IP Kis Par Kaam Karta Hai?
+### Q2. Does Switch Work on MAC or IP?
 
-> Switch **MAC Address** par kaam karta hai.
+> Switch works on **MAC Address**.
 
 ### Reason:
 > Switch is a **Layer 2** device.
 
 ---
 
-### Q3. Hub Smart Device Hai?
+### Q3. Is Hub a Smart Device?
 
 > ❌ **No**, Hub is a **dumb device**.
 
@@ -679,7 +679,7 @@ WiFi Devices 📱💻
 
 ---
 
-### Q4. Modem Ka Full Form?
+### Q4. What is the Full Form of Modem?
 
 > **MO**dulator + **DEM**odulator
 
@@ -688,9 +688,9 @@ WiFi Devices 📱💻
 
 ---
 
-### Q5. Default Gateway Kya Hota Hai?
+### Q5. What is Default Gateway?
 
-> Network ka **exit point** (usually the router).
+> The network's **exit point** (usually the router).
 
 ### Example:
 ```
@@ -700,9 +700,9 @@ Gateway: 192.168.1.1
 
 ---
 
-### Q6. Firewall Ka Kaam?
+### Q6. What Does a Firewall Do?
 
-> **Monitor** aur **filter** network traffic.
+> **Monitors** and **filters** network traffic.
 
 ### Functions:
 - ✅ Allow trusted traffic
@@ -711,9 +711,9 @@ Gateway: 192.168.1.1
 
 ---
 
-### Q7. Access Point Ka Kaam?
+### Q7. What Does an Access Point Do?
 
-> **WiFi provide** karna.
+> **Provides WiFi**.
 
 ### Functions:
 - 📶 Wireless connectivity
@@ -722,7 +722,7 @@ Gateway: 192.168.1.1
 
 ---
 
-### Q8. Hub Aur Switch Me Difference?
+### Q8. What is the Difference Between Hub and Switch?
 
 | Hub | Switch |
 |-----|--------|
@@ -733,9 +733,9 @@ Gateway: 192.168.1.1
 
 ---
 
-### Q9. Sabse Secure Device Kaun Sa Hai?
+### Q9. Which is the Most Secure Device?
 
-> **Firewall** — network ki first line of defense.
+> **Firewall** — network's first line of defense.
 
 ### Why:
 - ✅ Inspects all traffic
@@ -744,9 +744,9 @@ Gateway: 192.168.1.1
 
 ---
 
-### Q10. Router MAC Address Use Karta Hai Ya IP?
+### Q10. Does Router Use MAC Address or IP?
 
-> Router **IP Address** use karta hai.
+> Router uses **IP Address**.
 
 ### Reason:
 > Router works at **Layer 3** (Network Layer).
@@ -761,33 +761,33 @@ Gateway: 192.168.1.1
 
 | Device | One Line |
 |--------|----------|
-| **Router** | Network to Network Connect |
-| **Switch** | Device to Device Connect |
-| **Hub** | Broadcast to Everyone |
-| **Modem** | ISP Connection Provide |
-| **Gateway** | Network Translator |
+| **Router** | Connects Network to Network |
+| **Switch** | Connects Device to Device |
+| **Hub** | Broadcasts to Everyone |
+| **Modem** | Provides ISP Connection |
+| **Gateway** | Translates Networks |
 | **Firewall** | Security Guard |
-| **Access Point** | WiFi Provider |
+| **Access Point** | Provides WiFi |
 
 ---
 
 ## 📊 Quick Memory Card
 
 ```
-Router    = Rasta Dikhata Hai 🚦
-Switch    = Sahi Device Tak Data Pahunchata Hai ☎️
-Hub       = Sabko Data Sunata Hai 📢
-Modem     = Internet Se Milwata Hai 🌍
-Gateway   = Translate Karta Hai 🔄
-Firewall  = Security Deta Hai 🛡️
-Access Pt = WiFi Deta Hai 📶
+Router    = Shows the Path 🚦
+Switch    = Delivers Data to Correct Device ☎️
+Hub       = Broadcasts Data to Everyone 📢
+Modem     = Connects to Internet 🌍
+Gateway   = Translates 🔄
+Firewall  = Provides Security 🛡️
+Access Pt = Provides WiFi 📶
 ```
 
 ---
 
 ## 🚀 Day 11 Golden Line
 
-> ### "Router Rasta Dikhata Hai, Switch Sahi Device Tak Data Pahunchata Hai, Hub Sabko Data Sunata Hai, Modem Internet Se Milwata Hai, Gateway Translate Karta Hai, Firewall Security Deta Hai Aur Access Point WiFi Deta Hai."
+> ### "Router shows the path, Switch delivers data to the correct device, Hub broadcasts to everyone, Modem connects to the internet, Gateway translates, Firewall provides security, and Access Point provides WiFi."
 
 ---
 
